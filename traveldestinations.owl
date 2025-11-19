@@ -1,0 +1,524 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/traveldestinations#"
+     xml:base="http://example.org/traveldestinations"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:traveldestinations="http://example.org/traveldestinations#">
+    <owl:Ontology rdf:about="http://example.org/traveldestinations"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/traveldestinations#accessibleBy -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/traveldestinations#accessibleBy">
+        <rdfs:domain rdf:resource="http://example.org/traveldestinations#Destination"/>
+        <rdfs:range rdf:resource="http://example.org/traveldestinations#Transport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/traveldestinations#hasAccommodation -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/traveldestinations#hasAccommodation">
+        <rdfs:domain rdf:resource="http://example.org/traveldestinations#Destination"/>
+        <rdfs:range rdf:resource="http://example.org/traveldestinations#Accommodation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/traveldestinations#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/traveldestinations#locatedIn">
+        <rdfs:domain rdf:resource="http://example.org/traveldestinations#Destination"/>
+        <rdfs:range rdf:resource="http://example.org/traveldestinations#GeographicRegion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/traveldestinations#offersActivity -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/traveldestinations#offersActivity">
+        <rdfs:domain rdf:resource="http://example.org/traveldestinations#Destination"/>
+        <rdfs:range rdf:resource="http://example.org/traveldestinations#TouristActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/traveldestinations#averageCost -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/traveldestinations#averageCost">
+        <rdfs:domain rdf:resource="http://example.org/traveldestinations#Destination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/traveldestinations#elevation -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/traveldestinations#elevation">
+        <rdfs:domain rdf:resource="http://example.org/traveldestinations#Mountain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/traveldestinations#hasClimate -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/traveldestinations#hasClimate">
+        <rdfs:domain rdf:resource="http://example.org/traveldestinations#Destination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/traveldestinations#Accommodation -->
+
+    <owl:Class rdf:about="http://example.org/traveldestinations#Accommodation">
+        <rdfs:subClassOf rdf:resource="http://example.org/traveldestinations#TravelDestinationMain"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#accessibleBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#Transport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#locatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#GeographicRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#offersActivity"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#TouristActivity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="pt-br">lugar onde alguém pode ficar, seja temporariamente ou permanentemente.</dc:description>
+        <dc:description xml:lang="en">place where someone can stay, either temporarily or permanently</dc:description>
+        <rdfs:label xml:lang="en">Accommodation</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Acomodação</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/traveldestinations#Airplane -->
+
+    <owl:Class rdf:about="http://example.org/traveldestinations#Airplane">
+        <rdfs:subClassOf rdf:resource="http://example.org/traveldestinations#Transport"/>
+        <dc:description xml:lang="pt-br">aeronave que necessita de asas fixas e motores para se sustentar no ar</dc:description>
+        <dc:description xml:lang="en">powered fixed-wing aircraft</dc:description>
+        <rdfs:label xml:lang="en">Airplane</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Avião</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/traveldestinations#Beach -->
+
+    <owl:Class rdf:about="http://example.org/traveldestinations#Beach">
+        <rdfs:subClassOf rdf:resource="http://example.org/traveldestinations#Destination"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#offersActivity"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#WaterSport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">area of sand or small stones near the sea or another area of water such as a lake</dc:description>
+        <dc:description xml:lang="pt-br">zona de areia ou pequenas pedras na margem de um corpo de água</dc:description>
+        <rdfs:label xml:lang="en">Beach</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Praia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/traveldestinations#City -->
+
+    <owl:Class rdf:about="http://example.org/traveldestinations#City">
+        <rdfs:subClassOf rdf:resource="http://example.org/traveldestinations#GeographicRegion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#accessibleBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#Airplane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#hasAccommodation"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#Hostel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#hasAccommodation"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#Hotel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#locatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#locatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">densely populated area with a large number of inhabitants</dc:description>
+        <dc:description xml:lang="pt-br">área densamente povoada com um grande número de habitantes</dc:description>
+        <rdfs:label xml:lang="pt-br">Cidade</rdfs:label>
+        <rdfs:label xml:lang="en">City</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/traveldestinations#Country -->
+
+    <owl:Class rdf:about="http://example.org/traveldestinations#Country">
+        <rdfs:subClassOf rdf:resource="http://example.org/traveldestinations#GeographicRegion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#accessibleBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#Airplane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">distinct territorial body or political entity</dc:description>
+        <dc:description xml:lang="pt-br">território distinto ou de entidade política</dc:description>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+        <rdfs:label xml:lang="pt-br">País</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/traveldestinations#Destination -->
+
+    <owl:Class rdf:about="http://example.org/traveldestinations#Destination">
+        <rdfs:subClassOf rdf:resource="http://example.org/traveldestinations#TravelDestinationMain"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#accessibleBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#Airplane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#locatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#GeographicRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="pt-br">ponto de conclusão de algo</dc:description>
+        <dc:description xml:lang="en">termination of something</dc:description>
+        <rdfs:label xml:lang="en">Destination</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Destino</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/traveldestinations#GeographicRegion -->
+
+    <owl:Class rdf:about="http://example.org/traveldestinations#GeographicRegion">
+        <rdfs:subClassOf rdf:resource="http://example.org/traveldestinations#TravelDestinationMain"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#accessibleBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#Airplane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">2D or 3D defined space on something</dc:description>
+        <dc:description xml:lang="pt-br">área da superfície terrestre que apresenta características naturais</dc:description>
+        <rdfs:label xml:lang="en">Geographic Region</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Região geográfica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/traveldestinations#Hiking -->
+
+    <owl:Class rdf:about="http://example.org/traveldestinations#Hiking">
+        <rdfs:subClassOf rdf:resource="http://example.org/traveldestinations#TouristActivity"/>
+        <dc:description xml:lang="pt-br">viagens curtas em trilhas caminhando</dc:description>
+        <dc:description xml:lang="en">walking as a hobby, sport, or leisure activity</dc:description>
+        <rdfs:label xml:lang="pt-br">Caminhada</rdfs:label>
+        <rdfs:label xml:lang="en">Hiking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/traveldestinations#HistoricCity -->
+
+    <owl:Class rdf:about="http://example.org/traveldestinations#HistoricCity">
+        <rdfs:subClassOf rdf:resource="http://example.org/traveldestinations#Destination"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#locatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">administrative territorial entity</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">entidade territorial administrativa</dc:description>
+        <rdfs:label xml:lang="pt-br">Cidade histórica</rdfs:label>
+        <rdfs:label xml:lang="en">Historic City</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/traveldestinations#Hostel -->
+
+    <owl:Class rdf:about="http://example.org/traveldestinations#Hostel">
+        <rdfs:subClassOf rdf:resource="http://example.org/traveldestinations#Accommodation"/>
+        <dc:description xml:lang="pt-br">alojamento barato e sociável</dc:description>
+        <dc:description xml:lang="en">cheap, sociable accommodation</dc:description>
+        <rdfs:label xml:lang="en">Hostel</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Hostel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/traveldestinations#Hotel -->
+
+    <owl:Class rdf:about="http://example.org/traveldestinations#Hotel">
+        <rdfs:subClassOf rdf:resource="http://example.org/traveldestinations#Accommodation"/>
+        <dc:description xml:lang="en">business enterprise that provides indoor lodging in a single location paid on a short-term basis</dc:description>
+        <dc:description xml:lang="pt-br">edifício licenciado para abrigar pessoas de forma temporária e paga</dc:description>
+        <rdfs:label xml:lang="en">Hotel</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Hotel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/traveldestinations#Mountain -->
+
+    <owl:Class rdf:about="http://example.org/traveldestinations#Mountain">
+        <rdfs:subClassOf rdf:resource="http://example.org/traveldestinations#Destination"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#offersActivity"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#Hiking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="pt-br">grande porção de terra que se estende acima do terreno</dc:description>
+        <dc:description xml:lang="en">large natural elevation of the Earth&apos;s surface</dc:description>
+        <rdfs:label xml:lang="pt-br">Montanha</rdfs:label>
+        <rdfs:label xml:lang="en">Mountain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/traveldestinations#State -->
+
+    <owl:Class rdf:about="http://example.org/traveldestinations#State">
+        <rdfs:subClassOf rdf:resource="http://example.org/traveldestinations#GeographicRegion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#accessibleBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#Airplane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#locatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="pt-br">comunidade organizada com um sistema de governo próprio</dc:description>
+        <dc:description xml:lang="en">organised community living under a system of government</dc:description>
+        <rdfs:label xml:lang="pt-br">Estado</rdfs:label>
+        <rdfs:label xml:lang="en">State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/traveldestinations#TouristActivity -->
+
+    <owl:Class rdf:about="http://example.org/traveldestinations#TouristActivity">
+        <rdfs:subClassOf rdf:resource="http://example.org/traveldestinations#TravelDestinationMain"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/traveldestinations#locatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/traveldestinations#City"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="pt-br">Atividade para turistas</rdfs:label>
+        <rdfs:label xml:lang="en">Tourist Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/traveldestinations#Transport -->
+
+    <owl:Class rdf:about="http://example.org/traveldestinations#Transport">
+        <rdfs:subClassOf rdf:resource="http://example.org/traveldestinations#TravelDestinationMain"/>
+        <dc:description xml:lang="en">human-directed movement of things or people between locations</dc:description>
+        <rdfs:label xml:lang="en">Transport</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Transporte</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/traveldestinations#TravelDestinationMain -->
+
+    <owl:Class rdf:about="http://example.org/traveldestinations#TravelDestinationMain"/>
+    
+
+
+    <!-- http://example.org/traveldestinations#WaterSport -->
+
+    <owl:Class rdf:about="http://example.org/traveldestinations#WaterSport">
+        <rdfs:subClassOf rdf:resource="http://example.org/traveldestinations#TouristActivity"/>
+        <dc:description xml:lang="pt-br">esportes praticados na água</dc:description>
+        <dc:description xml:lang="en">sports that take place in or on water</dc:description>
+        <rdfs:label xml:lang="pt-br">Esporte aquático</rdfs:label>
+        <rdfs:label xml:lang="en">Water sport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/traveldestinations#BlueIslandHotel -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/traveldestinations#BlueIslandHotel">
+        <rdf:type rdf:resource="http://example.org/traveldestinations#Hotel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/traveldestinations#Brazil -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/traveldestinations#Brazil">
+        <rdf:type rdf:resource="http://example.org/traveldestinations#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/traveldestinations#Florianopolis -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/traveldestinations#Florianopolis">
+        <rdf:type rdf:resource="http://example.org/traveldestinations#Beach"/>
+        <accessibleBy rdf:resource="http://example.org/traveldestinations#LatamAirlines"/>
+        <hasAccommodation rdf:resource="http://example.org/traveldestinations#BlueIslandHotel"/>
+        <locatedIn rdf:resource="http://example.org/traveldestinations#SantaCatarina"/>
+        <offersActivity rdf:resource="http://example.org/traveldestinations#Surf"/>
+        <averageCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1800.0</averageCost>
+        <hasClimate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical</hasClimate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/traveldestinations#Gramado -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/traveldestinations#Gramado">
+        <rdf:type rdf:resource="http://example.org/traveldestinations#Mountain"/>
+        <averageCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2500.0</averageCost>
+        <hasClimate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cold</hasClimate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/traveldestinations#LatamAirlines -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/traveldestinations#LatamAirlines">
+        <rdf:type rdf:resource="http://example.org/traveldestinations#Airplane"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/traveldestinations#SantaCatarina -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/traveldestinations#SantaCatarina">
+        <rdf:type rdf:resource="http://example.org/traveldestinations#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/traveldestinations#StoneTrail -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/traveldestinations#StoneTrail">
+        <rdf:type rdf:resource="http://example.org/traveldestinations#Hiking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/traveldestinations#Surf -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/traveldestinations#Surf">
+        <rdf:type rdf:resource="http://example.org/traveldestinations#WaterSport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/traveldestinations#ValleyHostel -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/traveldestinations#ValleyHostel">
+        <rdf:type rdf:resource="http://example.org/traveldestinations#Hostel"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi -->
+
