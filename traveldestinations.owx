@@ -1,0 +1,748 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://example.org/traveldestinations"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://example.org/traveldestinations">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Accommodation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Airplane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Beach"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#City"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Destination"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GeographicRegion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hiking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HistoricCity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hostel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hotel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mountain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#State"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TouristActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Transport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TravelDestinationMain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WaterSport"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#accessibleBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAccommodation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#locatedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#offersActivity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#averageCost"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#elevation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasClimate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BlueIslandHotel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Brazil"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Florianopolis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gramado"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LatamAirlines"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SantaCatarina"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#StoneTrail"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Surf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ValleyHostel"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Accommodation"/>
+        <Class IRI="#TravelDestinationMain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Accommodation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#accessibleBy"/>
+            <Class IRI="#Transport"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Accommodation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#locatedIn"/>
+            <Class IRI="#GeographicRegion"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Accommodation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#offersActivity"/>
+            <Class IRI="#TouristActivity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Airplane"/>
+        <Class IRI="#Transport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Beach"/>
+        <Class IRI="#Destination"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Beach"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#offersActivity"/>
+            <Class IRI="#WaterSport"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City"/>
+        <Class IRI="#GeographicRegion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#accessibleBy"/>
+            <Class IRI="#Airplane"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAccommodation"/>
+            <Class IRI="#Hostel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAccommodation"/>
+            <Class IRI="#Hotel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#locatedIn"/>
+            <Class IRI="#Country"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#locatedIn"/>
+            <Class IRI="#State"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Country"/>
+        <Class IRI="#GeographicRegion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Country"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#accessibleBy"/>
+            <Class IRI="#Airplane"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Destination"/>
+        <Class IRI="#TravelDestinationMain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Destination"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#accessibleBy"/>
+            <Class IRI="#Airplane"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Destination"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#locatedIn"/>
+            <Class IRI="#GeographicRegion"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeographicRegion"/>
+        <Class IRI="#TravelDestinationMain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeographicRegion"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#accessibleBy"/>
+            <Class IRI="#Airplane"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hiking"/>
+        <Class IRI="#TouristActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HistoricCity"/>
+        <Class IRI="#Destination"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HistoricCity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#locatedIn"/>
+            <Class IRI="#State"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hostel"/>
+        <Class IRI="#Accommodation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hotel"/>
+        <Class IRI="#Accommodation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mountain"/>
+        <Class IRI="#Destination"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mountain"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#offersActivity"/>
+            <Class IRI="#Hiking"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#State"/>
+        <Class IRI="#GeographicRegion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#State"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#accessibleBy"/>
+            <Class IRI="#Airplane"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#State"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#locatedIn"/>
+            <Class IRI="#Country"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TouristActivity"/>
+        <Class IRI="#TravelDestinationMain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TouristActivity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#locatedIn"/>
+            <Class IRI="#City"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Transport"/>
+        <Class IRI="#TravelDestinationMain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WaterSport"/>
+        <Class IRI="#TouristActivity"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#BlueIslandHotel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Brazil"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Beach"/>
+        <NamedIndividual IRI="#Florianopolis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mountain"/>
+        <NamedIndividual IRI="#Gramado"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Airplane"/>
+        <NamedIndividual IRI="#LatamAirlines"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#State"/>
+        <NamedIndividual IRI="#SantaCatarina"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hiking"/>
+        <NamedIndividual IRI="#StoneTrail"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WaterSport"/>
+        <NamedIndividual IRI="#Surf"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hostel"/>
+        <NamedIndividual IRI="#ValleyHostel"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#accessibleBy"/>
+        <NamedIndividual IRI="#Florianopolis"/>
+        <NamedIndividual IRI="#LatamAirlines"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAccommodation"/>
+        <NamedIndividual IRI="#Florianopolis"/>
+        <NamedIndividual IRI="#BlueIslandHotel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#Florianopolis"/>
+        <NamedIndividual IRI="#SantaCatarina"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#offersActivity"/>
+        <NamedIndividual IRI="#Florianopolis"/>
+        <NamedIndividual IRI="#Surf"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#averageCost"/>
+        <NamedIndividual IRI="#Florianopolis"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1800.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasClimate"/>
+        <NamedIndividual IRI="#Florianopolis"/>
+        <Literal>Tropical</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#averageCost"/>
+        <NamedIndividual IRI="#Gramado"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2500.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasClimate"/>
+        <NamedIndividual IRI="#Gramado"/>
+        <Literal>Cold</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#accessibleBy"/>
+        <Class IRI="#Destination"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAccommodation"/>
+        <Class IRI="#Destination"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#locatedIn"/>
+        <Class IRI="#Destination"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#offersActivity"/>
+        <Class IRI="#Destination"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#accessibleBy"/>
+        <Class IRI="#Transport"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAccommodation"/>
+        <Class IRI="#Accommodation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#locatedIn"/>
+        <Class IRI="#GeographicRegion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#offersActivity"/>
+        <Class IRI="#TouristActivity"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#averageCost"/>
+        <Class IRI="#Destination"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#elevation"/>
+        <Class IRI="#Mountain"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasClimate"/>
+        <Class IRI="#Destination"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#averageCost"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#elevation"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasClimate"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Accommodation</IRI>
+        <Literal xml:lang="pt-br">lugar onde alguém pode ficar, seja temporariamente ou permanentemente.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Accommodation</IRI>
+        <Literal xml:lang="en">place where someone can stay, either temporarily or permanently</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Accommodation</IRI>
+        <Literal xml:lang="en">Accommodation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Accommodation</IRI>
+        <Literal xml:lang="pt-br">Acomodação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Airplane</IRI>
+        <Literal xml:lang="pt-br">aeronave que necessita de asas fixas e motores para se sustentar no ar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Airplane</IRI>
+        <Literal xml:lang="en">powered fixed-wing aircraft</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Airplane</IRI>
+        <Literal xml:lang="en">Airplane</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Airplane</IRI>
+        <Literal xml:lang="pt-br">Avião</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Beach</IRI>
+        <Literal xml:lang="en">area of sand or small stones near the sea or another area of water such as a lake</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Beach</IRI>
+        <Literal xml:lang="pt-br">zona de areia ou pequenas pedras na margem de um corpo de água</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Beach</IRI>
+        <Literal xml:lang="en">Beach</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Beach</IRI>
+        <Literal xml:lang="pt-br">Praia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#City</IRI>
+        <Literal xml:lang="en">densely populated area with a large number of inhabitants</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#City</IRI>
+        <Literal xml:lang="pt-br">área densamente povoada com um grande número de habitantes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#City</IRI>
+        <Literal xml:lang="pt-br">Cidade</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#City</IRI>
+        <Literal xml:lang="en">City</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Country</IRI>
+        <Literal xml:lang="en">distinct territorial body or political entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Country</IRI>
+        <Literal xml:lang="pt-br">território distinto ou de entidade política</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Country</IRI>
+        <Literal xml:lang="en">Country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Country</IRI>
+        <Literal xml:lang="pt-br">País</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Destination</IRI>
+        <Literal xml:lang="pt-br">ponto de conclusão de algo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Destination</IRI>
+        <Literal xml:lang="en">termination of something</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Destination</IRI>
+        <Literal xml:lang="en">Destination</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Destination</IRI>
+        <Literal xml:lang="pt-br">Destino</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#GeographicRegion</IRI>
+        <Literal xml:lang="en">2D or 3D defined space on something</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#GeographicRegion</IRI>
+        <Literal xml:lang="pt-br">área da superfície terrestre que apresenta características naturais</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GeographicRegion</IRI>
+        <Literal xml:lang="en">Geographic Region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GeographicRegion</IRI>
+        <Literal xml:lang="pt-br">Região geográfica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Hiking</IRI>
+        <Literal xml:lang="pt-br">viagens curtas em trilhas caminhando</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Hiking</IRI>
+        <Literal xml:lang="en">walking as a hobby, sport, or leisure activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Hiking</IRI>
+        <Literal xml:lang="pt-br">Caminhada</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Hiking</IRI>
+        <Literal xml:lang="en">Hiking</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#HistoricCity</IRI>
+        <Literal xml:lang="en">administrative territorial entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#HistoricCity</IRI>
+        <Literal>entidade territorial administrativa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HistoricCity</IRI>
+        <Literal xml:lang="pt-br">Cidade histórica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HistoricCity</IRI>
+        <Literal xml:lang="en">Historic City</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Hostel</IRI>
+        <Literal xml:lang="pt-br">alojamento barato e sociável</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Hostel</IRI>
+        <Literal xml:lang="en">cheap, sociable accommodation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Hostel</IRI>
+        <Literal xml:lang="en">Hostel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Hostel</IRI>
+        <Literal xml:lang="pt-br">Hostel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Hotel</IRI>
+        <Literal xml:lang="en">business enterprise that provides indoor lodging in a single location paid on a short-term basis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Hotel</IRI>
+        <Literal xml:lang="pt-br">edifício licenciado para abrigar pessoas de forma temporária e paga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Hotel</IRI>
+        <Literal xml:lang="en">Hotel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Hotel</IRI>
+        <Literal xml:lang="pt-br">Hotel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Mountain</IRI>
+        <Literal xml:lang="pt-br">grande porção de terra que se estende acima do terreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Mountain</IRI>
+        <Literal xml:lang="en">large natural elevation of the Earth&apos;s surface</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mountain</IRI>
+        <Literal xml:lang="pt-br">Montanha</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mountain</IRI>
+        <Literal xml:lang="en">Mountain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#State</IRI>
+        <Literal xml:lang="pt-br">comunidade organizada com um sistema de governo próprio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#State</IRI>
+        <Literal xml:lang="en">organised community living under a system of government</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#State</IRI>
+        <Literal xml:lang="pt-br">Estado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#State</IRI>
+        <Literal xml:lang="en">State</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TouristActivity</IRI>
+        <Literal xml:lang="pt-br">Atividade para turistas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TouristActivity</IRI>
+        <Literal xml:lang="en">Tourist Activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Transport</IRI>
+        <Literal xml:lang="en">human-directed movement of things or people between locations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Transport</IRI>
+        <Literal xml:lang="en">Transport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Transport</IRI>
+        <Literal xml:lang="pt-br">Transporte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#WaterSport</IRI>
+        <Literal xml:lang="pt-br">esportes praticados na água</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#WaterSport</IRI>
+        <Literal xml:lang="en">sports that take place in or on water</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WaterSport</IRI>
+        <Literal xml:lang="pt-br">Esporte aquático</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WaterSport</IRI>
+        <Literal xml:lang="en">Water sport</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi -->
+
